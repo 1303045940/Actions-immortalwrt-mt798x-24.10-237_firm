@@ -33,7 +33,7 @@ COMPILE_DATE=$(date +"%Y年%m月%d日")
 sed -i "s/%D/ openwrt/g" package/base-files/files/usr/lib/os-release
 sed -i "s/%D/ openwrt/g" package/base-files/files/etc/openwrt_release
 
-sed -i "s/%V/ 24.10.4 /g" package/base-files/files/usr/lib/os-release
+sed -i "s/%V/ 24.10.4    编译日期： ${COMPILE_DATE}  by 微信:Mr___zjz//g" package/base-files/files/usr/lib/os-release
 sed -i "s/%V/ 24.10.4    编译日期： ${COMPILE_DATE}  by 微信:Mr___zjz//g" package/base-files/files/etc/openwrt_release
 
 # 修改版本为编译日期，数字类型。
