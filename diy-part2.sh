@@ -47,12 +47,6 @@ git clone https://github.com/xiaorouji/openwrt-passwall package/passwall-luci
 # git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworldd
 # git -C package/helloworld pull
 
-# mosdns
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
-rm -rf feeds/packages/net/mosdns
-git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
-
 # tailscale
 sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
 git clone https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
